@@ -31,5 +31,5 @@ frontend/
 │           ├── AdminLogin.jsx
 │           ├── AdminDashboard.jsx
 │           ├── AddProduct.jsx
-│           ├── OrdersPage.jsx
+│           ├── ViewOrders.jsx
 │           └── CustomersPage.jsx
