@@ -1,0 +1,35 @@
+frontend/
+│
+├── src/
+│   ├── main.jsx           ← React entry point
+│   ├── App.jsx            ← Main app component (Router hub)
+│   │
+│   ├── assets/            ← Images, icons, logos
+│   │   └── react.svg
+│   │
+│   ├── styles/            ← CSS files
+│   │   ├── variables.css
+│   │   ├── theme.css
+│   │   └── common.css     ← Shared styling for pages/components
+│   │
+│   ├── components/        ← Reusable components
+│   │   ├── Navbar.jsx
+│   │   ├── Footer.jsx
+│   │   └── ProductCard.jsx
+│   │
+│   └── pages/
+│       ├── user/
+│       │   ├── UserLogin.jsx      ← START HERE
+│       │   ├── UserRegister.jsx
+│       │   ├── UserDashboard.jsx
+│       │   ├── ProductPage.jsx
+│       │   ├── OrdersPage.jsx
+│       │   ├── CartPage.jsx
+│       │   └── PaymentPage.jsx
+│       │
+│       └── admin/
+│           ├── AdminLogin.jsx
+│           ├── AdminDashboard.jsx
+│           ├── AddProduct.jsx
+│           ├── OrdersPage.jsx
+│           └── CustomersPage.jsx
