@@ -1,0 +1,26 @@
+backend/
+│
+├── app.py                  ← Main Flask entry point
+├── requirements.txt        ← List of Python dependencies (Flask, flask-cors, etc.)
+│
+├── config/                 ← Config files (e.g., DB connection, secret keys)
+│   └── config.py
+│
+├── routes/                 ← All API endpoints grouped by functionality
+│   ├── __init__.py
+│   ├── user_routes.py       ← Login, register, user dashboard
+│   ├── product_routes.py    ← Get products, product details
+│   ├── cart_routes.py       ← Add to cart, view cart
+│   ├── order_routes.py      ← Place order, view orders
+│   └── admin_routes.py      ← Admin login, add product, view all orders/customers
+│
+├── models/                 ← Data structures / ORM models / dummy data
+│   ├── __init__.py
+│   ├── user.py
+│   ├── product.py
+│   ├── cart.py
+│   └── order.py
+│
+├── utils/                  ← Helper functions
+    ├── __init__.py
+    └── helpers.py
