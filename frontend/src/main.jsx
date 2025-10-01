@@ -1,45 +1,50 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import "./index.css";
 
-// User Pages
-import HomePage from "./pages/HomePage";
-import ProductsPage from "./pages/ProductsPage";
-import CartPage from "./pages/CartPage";
-import CheckoutPage from "./pages/CheckoutPage";
-import PaymentPage from "./pages/PaymentPage";
+import UserLogin from "./pages/users/UserLogin";
+import UserDashboard from "./pages/users/UserDashboard";
+import ProductPage from "./pages/users/ProductPage";
+import OrdersPage from "./pages/users/OrdersPage";
+import CartPage from "./pages/users/CartPage";
+import PaymentPage from "./pages/users/PaymentPage";
 
-// Admin Pages
-import AdminDashboard from "./pages/admin/AdminDashboard";
+import AdminLogin from "./pages/admin/AdminLogin";
+import AdminDashboard  from "./pages/admin/AdminDashboard";
 import AddProduct from "./pages/admin/AddProduct";
-import OrdersPage from "./pages/admin/OrdersPage";
+import ViewOrders from "./pages/admin/ViewOrders"; 
 import CustomersPage from "./pages/admin/CustomersPage";
 
+import "./styles/variables.css";
+import "./styles/theme.css";
+import "./styles/common.css";
+
 const router = createBrowserRouter([
-  // ---------------- USER ROUTES ----------------
   {
     path: "/",
-    element: <HomePage />,
+    element: <UserLogin />,
   },
   {
-    path: "/products",
-    element: <ProductsPage />,
+    path: "/dashboard",
+    element: <UserDashboard />,
+  },
+  {
+    path: "/products/:id",
+    element: <ProductPage />,
+  },
+  {
+    path: "/orders",
+    element: <OrdersPage />,
   },
   {
     path: "/cart",
     element: <CartPage />,
   },
   {
-    path: "/checkout",
-    element: <CheckoutPage />,
-  },
-  {
     path: "/payment",
     element: <PaymentPage />,
   },
 
-  // ---------------- ADMIN ROUTES ----------------
   {
     path: "/admin",
     element: <AdminDashboard />,
@@ -50,7 +55,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/admin/orders",
-    element: <OrdersPage />,
+    element: <ViewOrders />,
   },
   {
     path: "/admin/customers",

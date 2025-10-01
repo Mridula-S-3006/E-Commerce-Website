@@ -1,0 +1,40 @@
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: var(--base-padding);
+}
+
+.card {
+  background: white;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  padding: var(--base-padding);
+  margin-bottom: var(--base-padding);
+}
+
+input, textarea, select {
+  width: 100%;
+  padding: var(--small-padding);
+  margin-bottom: var(--base-padding);
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  font-family: inherit;
+}
+
+h2 {
+  margin-bottom: var(--base-padding);
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--base-padding);
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.navbar a {
+  color: white;
+  margin-left: 20px;
+}

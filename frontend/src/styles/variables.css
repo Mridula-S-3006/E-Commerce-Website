@@ -1,0 +1,15 @@
+:root {
+  --primary-color: #4CAF50;
+  --secondary-color: #FF9800;
+  --danger-color: #f44336;
+  --text-color: #333;
+  --background-color: #f9f9f9;
+
+  --font-family: 'Segoe UI', sans-serif;
+
+  --base-padding: 16px;
+  --small-padding: 8px;
+
+  --border-radius: 8px;
+  --box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
