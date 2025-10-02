@@ -1,5 +1,10 @@
+
 import os
+
 class Config:
-    SECRET_KEY = os.environ.get('SECRET_KEY','supersecretkeyhehehe')
-    SQLALCHEMY_DATABASE_URI = os.environ.get('DATABASE_URL','postgresql:postgresqlmri2024@localhost:5432/ecommerce_db')
+    SECRET_KEY = os.environ.get("SECRET_KEY", "supersecretkey")
+    SQLALCHEMY_DATABASE_URI = os.environ.get(
+        "DATABASE_URL", "postgresql://postgres:password@localhost:5432/ecommerce_db"
+    )
     SQLALCHEMY_TRACK_MODIFICATIONS = False
+    JWT_SECRET_KEY = os.environ.get("JWT_SECRET_KEY", "jwt-secret-key")
