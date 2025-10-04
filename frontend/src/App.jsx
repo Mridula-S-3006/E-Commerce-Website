@@ -3,13 +3,13 @@ import React from "react";
 import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
 
 // User pages
-import UserLogin from "./pages/user/UserLogin";
-import UserRegister from "./pages/user/UserRegister";
-import UserDashboard from "./pages/user/UserDashboard";
-import ProductPage from "./pages/user/ProductPage";
-import OrdersPage from "./pages/user/OrdersPage";
-import CartPage from "./pages/user/CartPage";
-import PaymentPage from "./pages/user/PaymentPage";
+import UserLogin from "./pages/users/UserLogin";
+import UserRegister from "./pages/users/UserRegister";
+import UserDashboard from "./pages/users/UserDashboard";
+import ProductPage from "./pages/users/ProductPage";
+import OrdersPage from "./pages/users/OrdersPage";
+import CartPage from "./pages/users/CartPage";
+import PaymentPage from "./pages/users/PaymentPage";
 
 // Admin pages
 import AdminLogin from "./pages/admin/AdminLogin";
