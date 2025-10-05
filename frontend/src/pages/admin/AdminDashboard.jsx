@@ -7,7 +7,7 @@ const AdminDashboard = () => {
 
   const handleLogout = async () => {
     try {
-      await fetch("http://localhost:5000/api/admin/logout", {
+      await fetch(`${import.meta.env.VITE_API_URL}/api/admin/logout`, {
         method: "POST",
         credentials: "include",
       });

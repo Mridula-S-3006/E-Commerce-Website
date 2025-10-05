@@ -10,7 +10,7 @@ const PaymentPage = () => {
   useEffect(() => {
     const fetchCart = async () => {
       try {
-        const response = await fetch("http://localhost:5000/api/cart", {
+        const response = await fetch(`${import.meta.env.VITE_API_URL}/api/cart`, {
           method: "GET",
           credentials: "include",
         });
@@ -34,7 +34,7 @@ const PaymentPage = () => {
 
   const handlePlaceOrder = async () => {
     try {
-      const response = await fetch("http://localhost:5000/api/orders", {
+      const response = await fetch(`${import.meta.env.VITE_API_URL}/api/orders`, {
         method: "POST",
         credentials: "include",
         headers: {

@@ -8,8 +8,8 @@ const CartPage = () => {
   useEffect(() => {
     const fetchCart = async () => {
       try {
-        // TODO: Replace with your backend endpoint
-        const response = await fetch("http://localhost:5000/api/cart", {
+        const response = await fetch(`${import.meta.env.VITE_API_URL}/api/cart`
+, {
           method: "GET",
           credentials: "include", // if using cookies for auth
         });
@@ -31,7 +31,8 @@ const CartPage = () => {
 
   const removeItem = async (productId) => {
     try {
-      const response = await fetch(`http://localhost:5000/api/cart/${productId}`, {
+      const response = await fetch(`${import.meta.env.VITE_API_URL}/api/cart/${productId}`
+, {
         method: "DELETE",
         credentials: "include",
       });

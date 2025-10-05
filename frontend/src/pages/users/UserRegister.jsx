@@ -25,8 +25,8 @@ const UserRegister = () => {
     setLoading(true);
 
     try {
-      // TODO: Replace with your backend endpoint
-      const response = await fetch("http://localhost:5000/api/user/register", {
+      const response = await fetch(`${import.meta.env.VITE_API_URL}/api/users/register`
+, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ name, email, password }),
@@ -38,7 +38,6 @@ const UserRegister = () => {
         setError(data.message || "Registration failed.");
       } else {
         console.log("Registration successful:", data);
-        // TODO: Redirect to login or automatically login
       }
     } catch (err) {
       setError("Server error. Please try again later.");

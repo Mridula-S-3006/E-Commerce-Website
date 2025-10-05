@@ -1,4 +1,4 @@
-// frontend/src/pages/user/ProductPage.jsx
+
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 
@@ -11,8 +11,7 @@ const ProductPage = () => {
   useEffect(() => {
     const fetchProduct = async () => {
       try {
-        // TODO: Replace with your backend endpoint
-        const response = await fetch(`http://localhost:5000/api/products/${id}`);
+        const response = await fetch(`${import.meta.env.VITE_API_URL}/api/products/${id}`);
         const data = await response.json();
 
         if (!response.ok) {
@@ -45,7 +44,6 @@ const ProductPage = () => {
           <div className="product-actions">
             <button
               onClick={() => {
-                // TODO: Implement add to cart
                 console.log("Add to Cart:", product.id);
               }}
             >
@@ -53,7 +51,6 @@ const ProductPage = () => {
             </button>
             <button
               onClick={() => {
-                // TODO: Implement buy now / payment
                 console.log("Buy Now:", product.id);
               }}
             >

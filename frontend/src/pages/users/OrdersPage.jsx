@@ -8,8 +8,8 @@ const OrdersPage = () => {
   useEffect(() => {
     const fetchOrders = async () => {
       try {
-        // TODO: Replace with your backend endpoint
-        const response = await fetch("http://localhost:5000/api/orders/user", {
+        const response = await fetch(`${import.meta.env.VITE_API_URL}/api/orders/users`
+, {
           method: "GET",
           credentials: "include", // if using cookies for auth
         });

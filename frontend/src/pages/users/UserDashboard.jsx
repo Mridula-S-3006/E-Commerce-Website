@@ -8,8 +8,9 @@ const UserDashboard = () => {
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        // TODO: Replace with your backend endpoint
-        const response = await fetch("http://localhost:5000/api/products");
+
+        const response = await fetch(`${import.meta.env.VITE_API_URL}/api/products`
+);
         const data = await response.json();
 
         if (!response.ok) {
@@ -43,7 +44,6 @@ const UserDashboard = () => {
               <p>Price: ₹{product.price}</p>
               <button
                 onClick={() => {
-                  // TODO: Implement view product page
                   console.log("View Product:", product.id);
                 }}
               >
@@ -51,7 +51,6 @@ const UserDashboard = () => {
               </button>
               <button
                 onClick={() => {
-                  // TODO: Implement add to cart functionality
                   console.log("Add to Cart:", product.id);
                 }}
               >
